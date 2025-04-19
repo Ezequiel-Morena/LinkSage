@@ -1,0 +1,25 @@
+---
+import LinkList from '../components/LinkList';
+import { instantGamingLinks } from '../data/instantGamingLinks';
+import iconIG from '../assets/logo-horizontal.svg?url';
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>instantGaming Links</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">InstantGaming's Giveaways</h1>
+      <a href="https://www.instant-gaming.com/?igr=ezena" class="logo-container" target="_blank" rel="noopener noreferrer">
+        <img src={iconIG} class="logo" alt="Icono de InstantGaming">
+      </a>
+      <LinkList client:load links={instantGamingLinks} />
+    </main>
+  </body>
+</html>
