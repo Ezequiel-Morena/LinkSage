@@ -1,7 +1,5 @@
----
 
-```markdown
-# LinkSage
+  # LinkSage
 
 LinkSage is a web application that collects and displays links to weekly or monthly giveaways for any video game or item available on the Instant Gaming store. The goal is to provide users with a simple and centralized way to discover and access these giveaways.
 
@@ -89,7 +87,4 @@ The source code is located in the `src` folder. Below is a description of the pu
 1. When the page loads, it fetches the active giveaway links.
 2. For each giveaway, it queries the countdown endpoint to display the time remaining.
 3. Users can click on the links to directly access the corresponding giveaway on Instant Gaming.
-4. The timer updates in real time to reflect the exact time left until the end of each giveaway.
-```
-
----
+4. The timer updates in real time to reflect the exact time left until the end of each giveaway.   
