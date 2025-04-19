@@ -17,7 +17,7 @@ LinkSage es una aplicación web que recopila y muestra enlaces a sorteos (giveaw
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/LinkSage.git
+   git clone https://github.com/Ezequiel-Morena/LinkSage.git
    cd LinkSage
    ```
 2. Instala las dependencias:
