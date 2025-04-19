@@ -20,13 +20,8 @@ LinkSage is a web application that collects and displays links to weekly or mont
 
 1. Clone the repository:
    ```bash
-<<<<<<< HEAD
-   git clone https://github.com/Ezequiel-Morena/LinkSage.git
-   cd LinkSage
-=======
    git clone https://github.com/Ezequiel-Morena/instant-gaming-sweepstakes.git
    cd instant-gaming-sweepstakes
->>>>>>> 3cb91f8 (Translation of messages to English)
    ```
 2. Install dependencies:
    ```bash
@@ -91,27 +86,8 @@ The source code is located in the `src` folder. Below is a description of the pu
 
 ## How It Works
 
-<<<<<<< HEAD
-1. Al cargar la página, se obtienen los enlaces de los sorteos activos.
-2. Por cada sorteo, se consulta el endpoint de temporizador para mostrar el tiempo restante.
-3. Los usuarios pueden hacer clic en los enlaces para acceder directamente al sorteo correspondiente en Instant Gaming.
-4. El temporizador se actualiza en tiempo real para reflejar el tiempo exacto hasta el final de cada sorteo.
-
----
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT.
-
-**¿Qué significa esto?**  
-Puedes usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del software, siempre que incluyas el aviso de copyright y la licencia original.  
-El software se proporciona "tal cual", sin garantías de ningún tipo.
-
----
-=======
 1. When the page loads, it fetches the active giveaway links.
 2. For each giveaway, it queries the countdown endpoint to display the time remaining.
 3. Users can click on the links to directly access the corresponding giveaway on Instant Gaming.
 4. The timer updates in real time to reflect the exact time left until the end of each giveaway.
 ```
->>>>>>> 3cb91f8 (Translation of messages to English)
