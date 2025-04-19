@@ -51,7 +51,7 @@ export const useGiveawayTimer = (
       .then(res => res.json().then(data => ({ ok: res.ok, data })))
       .then(({ ok, data }) => {
         if (!ok || typeof data !== 'object' || Array.isArray(data)) {
-          throw new Error('Respuesta no válida de la API');
+          throw new Error('Invalid API response');
         }
 
         let earliestSeconds: number | null = null;
@@ -63,12 +63,12 @@ export const useGiveawayTimer = (
           const result = data[id];
 
           if (!result || typeof result !== 'object') {
-            console.warn(`Resultado inválido para ${id}`);
+            console.warn(`Invalid result for ${id}`);
             continue;
           }
 
           if (result.error) {
-            console.warn(`Error en ${id}: ${result.message ?? 'sin detalles'}`);
+            console.warn(`Error in ${id}: ${result.message ?? 'no details'}`);
             continue;
           }
 
@@ -100,7 +100,7 @@ export const useGiveawayTimer = (
         }
 
         if (allErrored) {
-          setError('No se pudo obtener información de ningún sorteo');
+          setError('Could not fetch any giveaway information');
           setRemainingSeconds(null);
           setHasEnded(false);
         } else if (anyEnded && earliestSeconds === null) {
@@ -113,7 +113,7 @@ export const useGiveawayTimer = (
         }
       })
       .catch(err => {
-        setError(err instanceof Error ? err.message : 'Error desconocido');
+        setError(err instanceof Error ? err.message : 'Unknown error');
         setRemainingSeconds(null);
         setHasEnded(false);
       })

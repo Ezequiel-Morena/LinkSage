@@ -5,7 +5,7 @@ import '../styles/LoadingSpinner.css';
 const LoadingSpinner: React.FC = () => (
   <div className="loading-spinner">
     <div className="spinner"></div>
-    <p>Cargando sorteos...</p>
+    <p>Loading...</p>
   </div>
 );
 

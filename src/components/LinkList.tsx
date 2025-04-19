@@ -142,7 +142,7 @@ const LinkList: React.FC<{ links: string[] }> = ({ links }) => {
       {/* Sección En Curso */}
       {enCurso.length > 0 && (
         <div className="link-section">
-          <h2 className="section-title en-curso">En Curso</h2>
+          <h2 className="section-title en-curso">In Progress</h2>
           <div className="link-list">
             {enCurso.map((item) => (
               <div key={item.url} className="link-item">
@@ -152,7 +152,7 @@ const LinkList: React.FC<{ links: string[] }> = ({ links }) => {
                   remainingSeconds={item.remainingSeconds}
                   hasEnded={item.hasEnded}
                   giveawayStatus={{
-                    error: item.error ? 'Error al cargar el sorteo' : undefined,
+                    error: item.error ? 'Failed to load the giveaway' : undefined,
                     isEnded: item.hasEnded,
                     remainingSeconds: item.remainingSeconds ?? undefined,
                   }}
@@ -166,7 +166,7 @@ const LinkList: React.FC<{ links: string[] }> = ({ links }) => {
       {/* Sección Finalizados */}
       {finalizados.length > 0 && (
         <div className="link-section">
-          <h2 className="section-title finalizados">Finalizados</h2>
+          <h2 className="section-title finalizados">Completed</h2>
           <div className="link-list">
             {finalizados.map((item) => (
               <div key={item.url} className="link-item">
@@ -176,7 +176,7 @@ const LinkList: React.FC<{ links: string[] }> = ({ links }) => {
                   remainingSeconds={item.remainingSeconds}
                   hasEnded={item.hasEnded}
                   giveawayStatus={{
-                    error: item.error ? 'Error al cargar el sorteo' : undefined,
+                    error: item.error ? 'Failed to load the giveaway' : undefined,
                     isEnded: item.hasEnded,
                     remainingSeconds: item.remainingSeconds ?? undefined,
                   }}
@@ -190,7 +190,7 @@ const LinkList: React.FC<{ links: string[] }> = ({ links }) => {
       {/* Sección Errores */}
       {errores.length > 0 && (
         <div className="link-section">
-          <h2 className="section-title errores">Errores</h2>
+          <h2 className="section-title errores">Errors</h2>
           <div className="link-list">
             {errores.map((item) => (
               <div key={item.url} className="link-item">
@@ -200,7 +200,7 @@ const LinkList: React.FC<{ links: string[] }> = ({ links }) => {
                   remainingSeconds={item.remainingSeconds}
                   hasEnded={item.hasEnded}
                   giveawayStatus={{
-                    error: item.error ? 'Error al cargar el sorteo' : undefined,
+                    error: item.error ? 'Failed to load the giveaway' : undefined,
                     isEnded: item.hasEnded,
                     remainingSeconds: item.remainingSeconds ?? undefined,
                   }}

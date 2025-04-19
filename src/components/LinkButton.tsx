@@ -75,9 +75,9 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   return (
     <div className={buttonClassName}>
       {isError ? (
-        <ErrorMessage error={giveawayStatus?.error || 'Error desconocido'} />
+        <ErrorMessage error={giveawayStatus?.error || 'Unknown error'} />
       ) : isFinalizado ? (
-        <StatusMessage message="Giveaway ha finalizado" />
+        <StatusMessage message="Giveaway has ended" />
       ) : !finished && timeLeft > 0 ? (
         <CountdownTimer formattedTime={formatTime(timeLeft)} />
       ) : null}

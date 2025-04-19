@@ -16,10 +16,10 @@ interface CountdownTimerProps {
 }
 
 const TIME_UNITS: TimeUnit[] = [
-  { value: 'days', label: 'Días' },
-  { value: 'hours', label: 'Horas' },
-  { value: 'minutes', label: 'Minutos' },
-  { value: 'seconds', label: 'Segundos' },
+  { value: 'days', label: 'Days' },
+  { value: 'hours', label: 'Hours' },
+  { value: 'minutes', label: 'Minutes' },
+  { value: 'seconds', label: 'Seconds' },
 ];
 
 const CountdownTimer: React.FC<CountdownTimerProps> = ({ formattedTime }) => {

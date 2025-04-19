@@ -1,87 +1,97 @@
+---
+
+```markdown
 # LinkSage
 
-LinkSage es una aplicación web que recopila y muestra enlaces a sorteos (giveaways) semanales o mensuales de cualquier videojuego o artículo disponible en la tienda de Instant Gaming. El objetivo es ofrecer a los usuarios una forma sencilla y centralizada de descubrir y acceder a estos sorteos.
+LinkSage is a web application that collects and displays links to weekly or monthly giveaways for any video game or item available on the Instant Gaming store. The goal is to provide users with a simple and centralized way to discover and access these giveaways.
 
 ---
 
-## Características principales
+## Main Features
 
-- **Listado actualizado** de sorteos activos de Instant Gaming.
-- **Temporizador** que muestra el tiempo restante para cada sorteo.
-- **Interfaz moderna y responsiva** para una experiencia de usuario óptima.
-- **Soporte multilenguaje** (español, inglés, francés).
+- **Up-to-date list** of active giveaways from Instant Gaming.
+- **Countdown timer** showing the remaining time for each giveaway.
+- **Modern and responsive interface** for an optimal user experience.
+- **Multilanguage support** (Spanish, English, French).
 
 ---
 
-## Instalación y ejecución
+## Installation and Running
 
-1. Clona el repositorio:
+1. Clone the repository:
    ```bash
+<<<<<<< HEAD
    git clone https://github.com/Ezequiel-Morena/LinkSage.git
    cd LinkSage
+=======
+   git clone https://github.com/Ezequiel-Morena/instant-gaming-sweepstakes.git
+   cd instant-gaming-sweepstakes
+>>>>>>> 3cb91f8 (Translation of messages to English)
    ```
-2. Instala las dependencias:
+2. Install dependencies:
    ```bash
    pnpm install
    ```
-3. Inicia el servidor de desarrollo:
+3. Start the development server:
    ```bash
    pnpm run dev
    ```
+
 ---
 
-## Estructura del proyecto
+## Project Structure
 
-El código fuente se encuentra en la carpeta `src`. A continuación, se describe el propósito de cada componente, hook y utilidad principal:
+The source code is located in the `src` folder. Below is a description of the purpose of each main component, hook, and utility:
 
-### Componentes (`src/components/`)
+### Components (`src/components/`)
 
 - **LinkList.tsx**  
-  Muestra la lista de sorteos activos, obteniendo los datos de los enlaces y renderizando cada uno como un elemento interactivo. Gestiona el estado de carga y posibles errores.
+  Displays the list of active giveaways, fetching link data and rendering each one as an interactive item. Manages loading states and possible errors.
 
 - **LinkButton.tsx**  
-  Componente reutilizable para renderizar botones de enlace estilizados, utilizado para acceder a los sorteos o realizar acciones relacionadas.
+  Reusable component to render styled link buttons, used to access giveaways or trigger related actions.
 
 - **LoadingSpinner.tsx**  
-  Indicador visual de carga, mostrado mientras se obtienen los datos de los sorteos.
+  Visual loading indicator, shown while giveaway data is being fetched.
 
-### Hooks personalizados (`src/hooks/`)
+### Custom Hooks (`src/hooks/`)
 
 - **useGiveawayTimer.ts**  
-  Hook que gestiona la lógica del temporizador para cada sorteo, obtiene el temporizador, calcula el tiempo restante y actualiza el temporizador.
+  Manages the timer logic for each giveaway, calculates the remaining time, and updates the timer.
 
 - **useFetchGiveaways.ts**  
-  Encapsula la lógica para obtener los datos de los sorteos desde la API, manejando estados de carga y error.
+  Encapsulates the logic for fetching giveaway data from the API, handling loading and error states.
 
-### Utilidades (`src/utils/`)
+### Utilities (`src/utils/`)
 
 - **scrapeGiveaway.ts**  
-  Función encargada de extraer (scrapear) la información relevante de los sorteos directamente desde la página de Instant Gaming, utilizando `axios` y `cheerio`.
+  Function responsible for scraping relevant giveaway information directly from the Instant Gaming website using `axios` and `cheerio`.
 
 - **dateUtils.ts**  
-  Utilidades para formatear y manipular fechas y horas, especialmente para mostrar correctamente el tiempo restante en los temporizadores.
+  Utilities for formatting and handling dates and times, especially to display countdowns correctly.
 
-### Datos (`src/data/`)
+### Data (`src/data/`)
 
 - **instantGamingLinks.ts**  
-  Archivo que contiene los enlaces de los sorteos actuales de Instant Gaming.
+  File containing the current giveaway links from Instant Gaming.
 
-### Estilos (`src/styles/`)
+### Styles (`src/styles/`)
 
-- Archivos CSS para personalizar la apariencia de los componentes y la disposición general de la aplicación.
+- CSS files to customize the appearance of components and the overall layout of the application.
 
-### Páginas y API (`src/pages/`)
+### Pages and API (`src/pages/`)
 
 - **index.tsx**  
-  Página principal que integra todos los componentes y muestra la interfaz al usuario.
+  Main page that integrates all components and displays the user interface.
 
 - **api/giveaway-timer/[giveawayId].ts**  
-  Endpoint de API que provee información actualizada sobre el temporizador de cada sorteo, consultado por los hooks y componentes.
+  API endpoint that provides updated countdown information for each giveaway, queried by the hooks and components.
 
 ---
 
-## ¿Cómo funciona?
+## How It Works
 
+<<<<<<< HEAD
 1. Al cargar la página, se obtienen los enlaces de los sorteos activos.
 2. Por cada sorteo, se consulta el endpoint de temporizador para mostrar el tiempo restante.
 3. Los usuarios pueden hacer clic en los enlaces para acceder directamente al sorteo correspondiente en Instant Gaming.
@@ -98,3 +108,10 @@ Puedes usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o
 El software se proporciona "tal cual", sin garantías de ningún tipo.
 
 ---
+=======
+1. When the page loads, it fetches the active giveaway links.
+2. For each giveaway, it queries the countdown endpoint to display the time remaining.
+3. Users can click on the links to directly access the corresponding giveaway on Instant Gaming.
+4. The timer updates in real time to reflect the exact time left until the end of each giveaway.
+```
+>>>>>>> 3cb91f8 (Translation of messages to English)
