@@ -91,3 +91,4 @@ The source code is located in the `src` folder. Below is a description of the pu
 3. Users can click on the links to directly access the corresponding giveaway on Instant Gaming.
 4. The timer updates in real time to reflect the exact time left until the end of each giveaway.
 ```
+---
