@@ -22,11 +22,11 @@ LinkSage es una aplicación web que recopila y muestra enlaces a sorteos (giveaw
    ```
 2. Instala las dependencias:
    ```bash
-   npm install
+   pnpm install
    ```
 3. Inicia el servidor de desarrollo:
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 ---
 
