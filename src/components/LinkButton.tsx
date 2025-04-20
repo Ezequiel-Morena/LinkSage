@@ -1,60 +1,25 @@
-// src/components/LinkButton.tsx
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import '../styles/LinkButton.css';
-import { truncateText } from '../utils/truncateText';
 import { formatTime } from '../utils/formatTime';
+import { useCountdown } from '../hooks/useCountdown';
+import { useTextTruncation } from '../hooks/useTextTruncation';
 import CountdownTimer from './CountdownTimer';
 import StatusMessage from './StatusMessage';
 import ErrorMessage from './ErrorMessage';
+
+interface GiveawayStatus {
+  error?: string;
+  isEnded?: boolean;
+  remainingSeconds?: number;
+}
 
 interface LinkButtonProps {
   fullUrl: string;
   displayText?: string;
   remainingSeconds?: number | null;
   hasEnded?: boolean;
-  giveawayStatus?: { error?: string; isEnded?: boolean; remainingSeconds?: number };
+  giveawayStatus?: GiveawayStatus;
 }
-
-const useCountdown = (initialSeconds: number | null, initialEnded: boolean) => {
-  const [timeLeft, setTimeLeft] = useState(initialSeconds ?? 0);
-  const [finished, setFinished] = useState(initialEnded || initialSeconds === 0 || initialSeconds == null);
-
-  useEffect(() => {
-    if (finished || timeLeft <= 0) return;
-
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        const newTime = prev - 1;
-        if (newTime <= 0) {
-          clearInterval(timer);
-          setFinished(true);
-          return 0;
-        }
-        return newTime;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [timeLeft, finished]);
-
-  return { timeLeft, finished };
-};
-
-const useTextTruncation = (displayText: string) => {
-  const spanRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    if (!spanRef.current) return;
-
-    const truncate = () => truncateText(spanRef.current!, displayText);
-    truncate();
-
-    window.addEventListener('resize', truncate);
-    return () => window.removeEventListener('resize', truncate);
-  }, [displayText]);
-
-  return spanRef;
-};
 
 const LinkButton: React.FC<LinkButtonProps> = ({
   fullUrl,
@@ -68,7 +33,6 @@ const LinkButton: React.FC<LinkButtonProps> = ({
 
   const isError = !!giveawayStatus?.error;
   const isFinalizado = !isError && (finished || giveawayStatus?.isEnded);
-
   const buttonClassName = `link-button-container${isError ? ' error' : isFinalizado ? ' finalizado' : ''}`;
   const buttonText = finished ? 'Finalizado' : displayText;
 

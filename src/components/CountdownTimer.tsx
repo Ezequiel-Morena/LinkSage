@@ -1,4 +1,3 @@
-// src/components/CountdownTimer.tsx
 import React from 'react';
 
 interface TimeUnit {
