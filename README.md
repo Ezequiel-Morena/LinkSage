@@ -10,7 +10,6 @@ LinkSage is a web application that collects and displays links to weekly or mont
 - **Up-to-date list** of active giveaways from Instant Gaming.
 - **Countdown timer** showing the remaining time for each giveaway.
 - **Modern and responsive interface** for an optimal user experience.
-- **Multilanguage support** (Spanish, English, French).
 
 ---
 
@@ -54,6 +53,15 @@ The source code is located in the `src` folder. Below is a description of the pu
 
 - **useFetchGiveaways.ts**  
   Encapsulates the logic for fetching giveaway data from the API, handling loading and error states.
+
+- **useCountdown.ts**
+  Custom hook that manages countdown logic, returning the remaining time in a format easily consumable by components. Useful for displaying real-time timers.
+
+- **useTextTruncation.ts**
+  Hook for intelligently truncating long text, adding ellipses if the content exceeds a character limit. Ideal for keeping the UI clean and preventing text overflow.
+
+- **useGiveawayItems.ts**
+  Encapsulates the logic for retrieving and managing the list of giveaway items, making it easier to reuse and separate concerns in components that display the giveaways.
 
 ### Utilities (`src/utils/`)
 
