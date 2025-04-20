@@ -74,7 +74,7 @@ The source code is located in the `src` folder. Below is a description of the pu
 ### Data (`src/data/`)
 
 - **instantGamingLinks.ts**  
-  File containing the current giveaway links from Instant Gaming.
+  File containing the current giveaway links from Instant Gaming. If you want to add more links to raffles, modify this file
 
 ### Styles (`src/styles/`)
 
