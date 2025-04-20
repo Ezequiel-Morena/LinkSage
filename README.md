@@ -82,7 +82,7 @@ The source code is located in the `src` folder. Below is a description of the pu
 
 ### Pages and API (`src/pages/`)
 
-- **index.tsx**  
+- **index.astro**  
   Main page that integrates all components and displays the user interface.
 
 - **api/giveaway-timer/[giveawayId].ts**  
