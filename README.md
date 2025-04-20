@@ -1,7 +1,7 @@
 
-  # LinkSage
+  # instant-gaming-sweepstakes
 
-LinkSage is a web application that collects and displays links to weekly or monthly giveaways for any video game or item available on the Instant Gaming store. The goal is to provide users with a simple and centralized way to discover and access these giveaways.
+Is a web application that collects and displays links to weekly or monthly giveaways for any video game or item available on the Instant Gaming store. The goal is to provide users with a simple and centralized way to discover and access these giveaways.
 
 ---
 
